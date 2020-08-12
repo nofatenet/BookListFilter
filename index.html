@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <title>BookList with Filter-Search</title>
+</head>
+
+<body>
+    <div class="container mt-4 pl-4 pr-4" id="container">
+
+        <h1 class="display-4">BookList
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-book" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3.214 1.072C4.813.752 6.916.71 8.354 2.146A.5.5 0 0 1 8.5 2.5v11a.5.5 0 0 1-.854.354c-.843-.844-2.115-1.059-3.47-.92-1.344.14-2.66.617-3.452 1.013A.5.5 0 0 1 0 13.5v-11a.5.5 0 0 1 .276-.447L.5 2.5l-.224-.447.002-.001.004-.002.013-.006a5.017 5.017 0 0 1 .22-.103 12.958 12.958 0 0 1 2.7-.869zM1 2.82v9.908c.846-.343 1.944-.672 3.074-.788 1.143-.118 2.387-.023 3.426.56V2.718c-1.063-.929-2.631-.956-4.09-.664A11.958 11.958 0 0 0 1 2.82z" />
+                <path fill-rule="evenodd"
+                    d="M12.786 1.072C11.188.752 9.084.71 7.646 2.146A.5.5 0 0 0 7.5 2.5v11a.5.5 0 0 0 .854.354c.843-.844 2.115-1.059 3.47-.92 1.344.14 2.66.617 3.452 1.013A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.276-.447L15.5 2.5l.224-.447-.002-.001-.004-.002-.013-.006-.047-.023a12.582 12.582 0 0 0-.799-.34 12.96 12.96 0 0 0-2.073-.609zM15 2.82v9.908c-.846-.343-1.944-.672-3.074-.788-1.143-.118-2.387-.023-3.426.56V2.718c1.063-.929 2.631-.956 4.09-.664A11.956 11.956 0 0 1 15 2.82z" />
+            </svg>
+        </h1>
+        <form id="book-form">
+            <span>made with plain</span>
+            <i class="fi-xnsuxl-javascript"></i>
+            <span> + Bootstrap + friconix</span>
+            <hr>
+            <div class="col-12">
+
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" class="form-control" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" class="form-control" placeholder="Author">
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" class="form-control" placeholder="ISBN">
+                </div>
+
+                <button type="submit" class="btn btn-warning" id="submitBtn">
+                    <!-- <i class="fi-swsuxl-sign-in-solid"></i> -->
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-down-right-square-fill"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm4.5 11h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.793L5.854 5.146a.5.5 0 1 0-.708.708L9.293 10H6.5a.5.5 0 0 0 0 1z" />
+                    </svg>
+                    Add Book to List
+                </button>
+                <hr>
+
+                <div class="form-group">
+                    <label for="filterInput">Filter Search:</label>
+                    <input type="text" id="filterInput" class="form-control" placeholder="Search Title...">
+                </div>
+
+                <p id="errorMsg"></p>
+            </div>
+        </form>
+        <table class="table table-striped mt-5" id="titles">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th><i class="fi-cnsuxl-times-solid"></i></th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+        <i class="fi-xnsuxl-code-solid"></i>
+        <p>
+            <a id="searchIsbn" href="https://isbnsearch.org/">Manually Look up Books on ISBN Search</a>
+        </p>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
