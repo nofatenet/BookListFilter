@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://friconix.com/cdn/friconix.js"> </script>
-    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
     <title>BookList with Filter-Search</title>
 </head>
 
 <body>
+
     <div class="container mt-4 pl-4 pr-4" id="container">
 
         <h1 class="display-4">BookList
@@ -73,6 +73,7 @@
             <tbody id="book-list"></tbody>
         </table>
         <i class="fi-xnsuxl-code-solid"></i>
+        <button style="margin-left: 40%;" class="btn" onclick="backToTop()">↑ Back to Top ↑</button>
         <p>
             <a id="searchIsbn" href="https://isbnsearch.org/">Manually Look up Books on ISBN Search</a>
         </p>
